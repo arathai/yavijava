@@ -29,7 +29,8 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package org.doublecloud.ws.util;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import java.lang.reflect.Array;
 import java.util.Calendar;
@@ -44,7 +45,7 @@ public class TypeUtil {
     final public static Class<?> BYTE_ARRAY_CLASS = byte[].class;
     final public static Class<?> LONG_ARRAY_CLASS = long[].class;
 
-    private static Logger log = Logger.getLogger(TypeUtil.class);
+    private static Logger log = LogManager.getLogger(TypeUtil.class);
 
     private final static Set<String> PRIMITIVE_TYPES = new HashSet<String>();
 

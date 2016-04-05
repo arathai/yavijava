@@ -96,7 +96,8 @@ import com.vmware.vim25.mo.InventoryNavigator;
 import com.vmware.vim25.mo.ServiceInstance;
 import com.vmware.vim25.mo.Task;
 import com.vmware.vim25.mo.VirtualMachine;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * VirtualMachineDeviceManager manages the virtual devices in a much
@@ -120,7 +121,7 @@ public class VirtualMachineDeviceManager {
     /**
      * Create a logger
      */
-    private static Logger log = Logger.getLogger(VirtualMachineDeviceManager.class);
+    private static Logger log = LogManager.getLogger(VirtualMachineDeviceManager.class);
 
     public VirtualMachineDeviceManager(VirtualMachine vm) {
         this.vm = vm;

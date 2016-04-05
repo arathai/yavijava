@@ -4,7 +4,8 @@ import org.apache.http.conn.ssl.AllowAllHostnameVerifier;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
 import org.apache.http.conn.ssl.SSLContextBuilder;
 import org.apache.http.conn.ssl.TrustSelfSignedStrategy;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import java.security.KeyManagementException;
 import java.security.KeyStoreException;
@@ -29,7 +30,7 @@ import java.security.NoSuchAlgorithmException;
  */
 public class ApacheTrustSelfSigned {
 
-    private static Logger log = Logger.getLogger(ApacheTrustSelfSigned.class);
+    private static Logger log = LogManager.getLogger(ApacheTrustSelfSigned.class);
 
     public static SSLConnectionSocketFactory trust() {
         SSLContextBuilder builder = new SSLContextBuilder();

@@ -31,7 +31,8 @@ POSSIBILITY OF SUCH DAMAGE.
 
 package com.vmware.vim25.ws;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLPeerUnverifiedException;
@@ -56,7 +57,7 @@ import java.security.cert.X509Certificate;
 
 public class WSClient extends SoapClient {
 
-    private static final Logger log = Logger.getLogger(WSClient.class);
+    private static final Logger log = LogManager.getLogger(WSClient.class);
     private final SSLSocketFactory sslSocketFactory;
 
     private XmlGen xmlGen = new XmlGenDom();

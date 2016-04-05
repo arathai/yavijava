@@ -30,7 +30,8 @@ POSSIBILITY OF SUCH DAMAGE.
 package com.vmware.vim25.ws;
 
 import com.vmware.vim25.*;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import javax.net.ssl.TrustManager;
 import java.lang.reflect.InvocationTargetException;
@@ -49,7 +50,7 @@ public class VimStub {
     /**
      * Setup logger
      */
-    private static Logger log = Logger.getLogger(VimStub.class);
+    private static Logger log = LogManager.getLogger(VimStub.class);
 
     public VimStub(String url, boolean ignoreCert) {
         try {

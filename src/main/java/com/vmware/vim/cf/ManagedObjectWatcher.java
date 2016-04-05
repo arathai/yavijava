@@ -42,7 +42,8 @@ import com.vmware.vim25.UpdateSet;
 import com.vmware.vim25.mo.ManagedObject;
 import com.vmware.vim25.mo.PropertyCollector;
 import com.vmware.vim25.mo.PropertyFilter;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * @author Steve JIN (sjin@vmware.com)
@@ -65,7 +66,7 @@ class ManagedObjectWatcher extends Observable implements Runnable {
     /**
      * Logger
      */
-    private static Logger log = Logger.getLogger(ManagedObjectWatcher.class);
+    private static Logger log = LogManager.getLogger(ManagedObjectWatcher.class);
 
     public ManagedObjectWatcher(PropertyCollector pc) {
         this.pc = pc;

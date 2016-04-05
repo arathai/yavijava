@@ -32,7 +32,8 @@ package com.vmware.vim25.mo.util;
 import com.vmware.vim25.*;
 import com.vmware.vim25.mo.ManagedObject;
 import com.vmware.vim25.mo.PropertyCollector;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import java.lang.reflect.Method;
 import java.rmi.RemoteException;
@@ -48,7 +49,7 @@ import java.util.List;
  */
 public class PropertyCollectorUtil {
 
-    private static Logger log = Logger.getLogger(PropertyCollectorUtil.class);
+    private static Logger log = LogManager.getLogger(PropertyCollectorUtil.class);
 
     final public static Object NULL = new Object();
 

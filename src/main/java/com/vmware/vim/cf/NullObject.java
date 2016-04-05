@@ -9,5 +9,5 @@ final public class NullObject extends Object
 	public String toString()
 	{
 		return "null";
-	};
+	}
 }

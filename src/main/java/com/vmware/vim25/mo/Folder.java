@@ -48,7 +48,6 @@ public class Folder extends ManagedEntity {
     // the array could have different real types, therefore cannot use getManagedObjects()
     public ManagedEntity[] getChildEntity() throws InvalidProperty, RuntimeFault, RemoteException {
         ManagedObjectReference[] mors = (ManagedObjectReference[]) getCurrentProperty("childEntity");
-        ;
 
         if (mors == null) {
             return new ManagedEntity[]{};

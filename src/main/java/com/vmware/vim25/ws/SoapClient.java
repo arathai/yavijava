@@ -1,6 +1,7 @@
 package com.vmware.vim25.ws;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import javax.net.ssl.TrustManager;
 import java.io.BufferedReader;
@@ -32,7 +33,7 @@ import java.security.cert.CertificateEncodingException;
  */
 public abstract class SoapClient implements Client {
 
-    private static Logger log = Logger.getLogger(SoapClient.class);
+    private static Logger log = LogManager.getLogger(SoapClient.class);
     public String soapAction;
     public URL baseUrl = null;
     public String cookie = null;
